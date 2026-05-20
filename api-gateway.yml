@@ -14,25 +14,14 @@ spring:
           routes:
 
             - id: order-service
-              uri: lb://order-service
+              uri: lb://ORDER-SERVICE
               predicates:
                 - Path=/order/**
 
             - id: payment-service
-              uri: lb://payment-service
+              uri: lb://PAYMENT-SERVICE
               predicates:
                 - Path=/payment/**
-
-management:
-  endpoints:
-    web:
-      exposure:
-        include: "*"
-
-  endpoint:
-    health:
-      show-details: alwaysrver:
-  port: 9090
 
 management:
   endpoints:
